@@ -142,6 +142,7 @@ const issue = data.data
 document.getElementById("modalTitle").innerText = issue.title
 document.getElementById("modalDescription").innerText = issue.description
 document.getElementById("modalAuthor").innerText = issue.author
+document.getElementById("modalAssignee").innerText = issue.author
 document.getElementById("modalPriority").innerText = issue.priority
 document.getElementById("modalLabel").innerText = issue.label
 document.getElementById("modalCreated").innerText = issue.createdAt
