@@ -89,27 +89,50 @@ if(label === "documentation") color = "bg-green-100 text-green-600"
 return `<span class="text-[11px] font-medium px-2 py-1 rounded-full ${color}">
 ${label.toUpperCase()}
 </span>`
-
 }).join("")}
-
 </div>
-
-
 <div class="border-t mt-4 pt-3 text-[11px] text-gray-400">
-
 #${issue.id} by ${issue.author}
-
 <br>
-
 ${new Date(issue.createdAt).toLocaleDateString()}
-
 </div>
-
 </div>
 `
 issueContainer.appendChild(card)
-
 })
+}
+
+const allTab = document.getElementById("allTab")
+const openTab = document.getElementById("openTab")
+const closedTab = document.getElementById("closedTab")
+
+allTab.onclick = () => {
+setActiveTab(allTab)
+renderIssues(allIssues)
+}
+
+openTab.onclick = () => {
+setActiveTab(openTab)
+const openIssues = allIssues.filter(issue => issue.status === "open")
+renderIssues(openIssues)
+}
+
+
+closedTab.onclick = () => {
+
+setActiveTab(closedTab)
+const closedIssues = allIssues.filter(issue => issue.status === "closed")
+renderIssues(closedIssues)
+}
+function setActiveTab(activeBtn){
+
+[allTab, openTab, closedTab].forEach(btn => {
+btn.classList.remove("btn-primary")
+btn.classList.add("btn-outline")
+})
+
+activeBtn.classList.remove("btn-outline")
+activeBtn.classList.add("btn-primary")
 
 }
 
