@@ -125,14 +125,33 @@ const closedIssues = allIssues.filter(issue => issue.status === "closed")
 renderIssues(closedIssues)
 }
 function setActiveTab(activeBtn){
-
 [allTab, openTab, closedTab].forEach(btn => {
 btn.classList.remove("btn-primary")
 btn.classList.add("btn-outline")
 })
-
 activeBtn.classList.remove("btn-outline")
 activeBtn.classList.add("btn-primary")
 
 }
+
+async function openIssue(id){
+
+const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
+const data = await res.json()
+const issue = data.data
+document.getElementById("modalTitle").innerText = issue.title
+document.getElementById("modalDescription").innerText = issue.description
+document.getElementById("modalAuthor").innerText = issue.author
+document.getElementById("modalPriority").innerText = issue.priority
+document.getElementById("modalLabel").innerText = issue.label
+document.getElementById("modalCreated").innerText = issue.createdAt
+document.getElementById("modalStatus").innerText = issue.status
+document.getElementById("modalStatus").className =
+issue.status === "open"
+? "badge badge-success"
+: "badge badge-secondary"
+document.getElementById("issueModal").showModal()
+
+}
+
 
