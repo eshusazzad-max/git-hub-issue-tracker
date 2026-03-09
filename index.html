@@ -14,6 +14,7 @@
     window.location.href = "login.html"
     }
     </script>
+    
 
 </head>
 <body class="bg-base-200 min-h-screen">
@@ -81,10 +82,57 @@
      Closed
    </div>
   </div>
+ </div>
+
+ <!-- ISSUE CARDS GRID -->
+ <div id="loadingSpinner" class="flex justify-center my-10 hidden">
+  <span class="loading loading-spinner loading-lg text-primary"></span>
+ </div>
+
+ <div id="issueContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+ </div>
 
 </div>
 
-</div>
+ <!-- ISSUE MODAL -->  
+<dialog id="issueModal" class="modal">
+  <div class="modal-box max-w-xl">
+
+    <h3 id="modalTitle" class="text-xl font-semibold mb-2"></h3>
+
+    <div class="flex items-center gap-2 text-sm mb-4">
+      <span id="modalStatus" class="badge badge-success"></span>
+      <span>Opened by <span id="modalAuthor"></span></span>
+      <span id="modalCreated"></span>
+    </div>
+
+    <div class="flex gap-2 mb-4">
+      <span id="modalLabel" class="badge badge-error badge-outline"></span>
+    </div>
+
+    <p id="modalDescription" class="text-gray-600 mb-4"></p>
+
+    <div class="grid grid-cols-2 gap-4 bg-base-200 p-4 rounded-lg">
+      <div>
+        <p class="text-sm text-gray-500">Assignee:</p>
+        <p id="modalAuthor" class="font-medium"></p>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500">Priority:</p>
+        <span id="modalPriority" class="badge badge-error"></span>
+      </div>
+    </div>
+
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+
+  </div>
+</dialog>
+
 
     
 </body>
