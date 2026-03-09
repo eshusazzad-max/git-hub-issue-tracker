@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Tailwind + DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-base-200 min-h-screen flex items-center justify-center">
+<div class="card w-96 bg-base-100 shadow-xl">
+
+ <div class="card-body text-center">
+
+  <img src="./assets/github-logo.png" class="w-12 mx-auto">
+
+  <h2 class="text-2xl font-bold">GitHub Issue Tracker</h2>
+
+  <p class="text-sm text-gray-500">Track and manage repository issues</p>
+
+  <input
+   id="username"
+   type="text"
+   placeholder="Username"
+   class="input input-bordered mt-4"/>
+
+  <input
+   id="password"
+   type="password"
+   placeholder="Password"
+   class="input input-bordered"/>
+
+  <button id="loginBtn" class="btn btn-primary mt-3">Sign In</button>
+
+  <p class="text-xs text-gray-500 mt-3">
+   Demo Credentials:
+  <br>
+   Username: admin
+  <br>
+   Password: admin123
+  </p>
+
+ </div>
+
+</div>
+
+    
+</body>
+</html>
