@@ -1,3 +1,46 @@
+# 🚀 GitHub Issue Tracker
+
+## 📌 Overview
+This project is a GitHub-style Issue Tracker UI where users can view, manage, and interact with issues. It focuses on clean UI design, structured layout, and basic functionality.
+
+---
+
+## 🌐 Live Link
+👉 https://eshusazzad-max.github.io/git-hub-issue-tracker/
+
+<img width="1920" height="3651" alt="screencapture-eshusazzad-max-github-io-git-hub-issue-tracker-2026" src="https://github.com/user-attachments/assets/d44ca92f-80b3-477f-bcd8-03710c7df74f" />
+
+
+## 🛠️ Technologies Used
+- HTML  
+- CSS  
+- JavaScript  
+
+---
+
+## ✨ Key Features
+- 📋 Issue listing system  
+- 🟢 Status indicators (Open / Closed)  
+- 🔍 Clean & organized UI  
+- 📱 Fully responsive design  
+- 🔐 Basic login system (localStorage based)  
+
+---
+
+## 📦 Dependencies
+No external libraries used (Pure Vanilla JS project)
+
+---
+
+## ⚙️ How to Run Locally
+
+```bash
+git clone https://github.com/eshusazzad-max/git-hub-issue-tracker.git
+cd git-hub-issue-tracker
+open index.html
+
+
+<!-- 
 1----What is the difference between var, let, and const?
 
 JavaScript এ var, let,এবং const তিনটাই variable declare করার জন্য ব্যবহার করা হয় কিন্তু এদের behavior আলাদা
@@ -40,4 +83,5 @@ Arrow function হচ্ছে JavaScript এ function লেখার একট
 
 5--- What are template literals?
 
-Template literals ব্যবহার করা হয় string এর মধ্যে variable সহজভাবে insert করার জন্য
+Template literals ব্যবহার করা হয় string এর মধ্যে variable সহজভাবে insert করার জন্য 
+-->
